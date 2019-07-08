@@ -85,27 +85,7 @@ class Header extends Component {
           }
           translucent={this.props.transparent ? true : this.props.translucent}
         />
-        {variables.isIphoneX ? (
-          <View
-            ref={c => (this._root = c)}
-            {...this.props}
-            style={[
-              this.props.style,
-              {
-                height: this.calculateHeight(
-                  this.state.orientation,
-                  variables.Inset
-                ),
-                paddingTop: this.calculatePadder(
-                  this.state.orientation,
-                  variables.Inset
-                )
-              }
-            ]}
-          />
-        ) : (
-          <View ref={c => (this._root = c)} {...this.props} />
-        )}
+        <View ref={c => (this._root = c)} {...this.props} />
       </View>
     );
   }
